@@ -2,8 +2,9 @@ from django.db import models
 
 
 class conf(models.Model):
-    img = models.ImageField(upload_to='pics')
-    desc = models.TextField()
+    email = models.EmailField()
+    img = models.ImageField(upload_to='pics',null=True)
+    desc = models.TextField(null=True)
     nooflikes = models.IntegerField(default=0)
     noofloves = models.IntegerField(default=0)
     noofwows = models.IntegerField(default=0)
