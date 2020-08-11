@@ -11,10 +11,11 @@ def home(request):
 
 def login(request):
     if request.method== 'POST':
+        email = request.POST['email']
         username = request.POST['username']
         password = request.POST['password']
 
-        user = auth.authenticate(username=username, password=password)
+        user = auth.authenticate(username=username, password=password,email=email)
 
         if user is not None:
             auth.login(request, user)
@@ -67,7 +68,7 @@ def creatpost(request):
         descreption =request.POST['desc']
 
         if user.is_authenticated:
-            Confession=conf(img='imeage', desc='decreption',email='user.email')
+            Confession=conf(img=imeage, desc=decreption,email=user.email)
             Confession.save();
             messages,info(request,'confession has been saved')
         else:
