@@ -2,7 +2,7 @@ from django.db import models
 
 
 class conf(models.Model):
-    email = models.EmailField()
+    email = models.EmailField(default="example@gmail.com")
     img = models.ImageField(upload_to='pics',null=True)
     desc = models.TextField(null=True)
     nooflikes = models.IntegerField(default=0)
