@@ -7,5 +7,6 @@ urlpatterns = [
     path('creatpost/', views.creatpost, name ='creatpost'),
     path('contactus/', views.contactus, name ='contactus'),
     path('aboutus/', views.aboutus, name ='aboutus'),
+    path('profilepage/', views.profilepage, name='profilepage'),
 
 ]

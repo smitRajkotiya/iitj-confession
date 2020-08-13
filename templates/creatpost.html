@@ -23,12 +23,15 @@
 
 					<h3>CREAT Confession</h3>
 
-					<form action="creatpost" method="post">
+					<form action="" method="post" autocomplete="on">
+                    	{% csrf_token %}
+
 
 						{% comment %} <div class="field half first">
 							<label for="name">Name</label>
 							<input name="name" id="name" type="text" placeholder="Name">
 						</div> {% endcomment %}
+                    
 						<div class="field half">
 							<label for="img">Select image:</label>
                             <input type="file" id="img" name="img" accept="image/*">
@@ -41,7 +44,13 @@
 						<ul class="actions">
 							<li><input value="Submit" class="button alt" type="submit"></li>
 						</ul>
+                        
 					</form>
+                    <div>
+                            {% for message in messages %}
+                            <h3> {{message}}  </h3>
+                            {% endfor %}
+                    </div>
 
 				</div>
 			</footer>
