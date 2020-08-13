@@ -32,6 +32,11 @@
 </div>
 
 </div>
+ <div>
+            {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+</div>
 
 <script type="text/javascript">
 	const signUpButton = document.getElementById('signUp');

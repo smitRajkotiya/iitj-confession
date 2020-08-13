@@ -23,11 +23,16 @@
 	</div>
     <span>or use your account</span>
     <input type="text" name="username" placeholder="Name">
-	<input type="email" name="email" placeholder="Email">
 	<input type="password" name="password" placeholder="Password">
     <input type="Submit">
 	</form>
 
+</div>
+</div>
+ <div>
+            {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
 </div>
 
 <script type="text/javascript">

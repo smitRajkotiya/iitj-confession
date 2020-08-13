@@ -9,7 +9,12 @@ def home(request):
     return render(request, 'home.html')
 
 
+def contactus(request):
+    return render(request, 'contactus.html')
 
+
+def aboutus(request):
+    return render(request, 'aboutus.html')
 
 
 def postpage(request):
@@ -28,4 +33,4 @@ def creatpost(request):
         else:
             messages.info(request, 'Please login for confession')
     else:
-        return render(request, 'creatpostpage.html')
+        return render(request, 'creatpost.html')
