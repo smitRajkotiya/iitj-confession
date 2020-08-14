@@ -4,7 +4,7 @@ from django.utils import timezone
 
 class conf(models.Model):
     email = models.EmailField(default="example@gmail.com")
-    image = models.ImageField(upload_to='images/',null=True)
+    image = models.ImageField(upload_to='static/images/',null=True)
     desc = models.TextField(null=True)
     nooflikes = models.IntegerField(default=0)
     noofloves = models.IntegerField(default=0)
