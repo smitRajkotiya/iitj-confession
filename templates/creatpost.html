@@ -23,7 +23,8 @@
 
 					<h3>CREAT Confession</h3>
 
-					<form action="" method="post" autocomplete="on">
+					<form action="/creatpost/" method="post">
+
                     	{% csrf_token %}
 
 
@@ -34,7 +35,7 @@
                     
 						<div class="field half">
 							<label for="img">Select image:</label>
-                            <input type="file" id="img" name="img" accept="image/*">
+                            <input type="file" id="image" name="image" accept="image/*">
 						</div> 
 
 						<div class="field">

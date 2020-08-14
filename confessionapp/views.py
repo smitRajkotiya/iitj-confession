@@ -19,22 +19,24 @@ def aboutus(request):
 
 def postpage(request):
     confession=conf.objects.all()
+    data= {'confession':confession}
 
-    return render(request, 'postpage.html', confession)
+    return render(request, 'postpage.html', data)
 
 def profilepage(request):
     
     confession=conf.objects.filter(email=request.user.email)
+    data= {'confession':confession}
 
-    return render(request, 'profilepage.html', confession)
+    return render(request, 'profilepage.html', data)
 
 def creatpost(request):
     if request.method == 'POST':
-        imeage = request.POST['img']
+        image = request.POST['image']
         descreption =request.POST['desc']
 
         if request.user.is_authenticated:
-            Confession=conf(img=imeage, desc=descreption,email=request.user.email)
+            Confession=conf(image=image, desc=descreption,email=request.user.email)
             Confession.save();
             print("confession reated")
             messages.info(request,'confession has been saved')
