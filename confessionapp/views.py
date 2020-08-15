@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from .models import conf
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 
@@ -32,14 +33,14 @@ def profilepage(request):
 
 def creatpost(request):
     if request.method == 'POST':
-        image = request.POST['image']
         descreption =request.POST['desc']
-
+        image=request.FILES['image']
+        fs=FileSystemStorage()
+        fs.save(image.name,image)
         if request.user.is_authenticated:
             Confession=conf(image=image, desc=descreption,email=request.user.email)
             Confession.save();
             print("confession reated")
-            messages.info(request,'confession has been saved')
             return redirect('/')
         else:
             messages.info(request, 'Please login for confession')

@@ -22,8 +22,8 @@
 				<div class="inner">
 
 					<h3>CREAT Confession</h3>
-
-					<form action="/creatpost/" method="post">
+				{% block content %}	
+					<form method="post" enctype="multipart/form-data">
 
                     	{% csrf_token %}
 
@@ -35,7 +35,7 @@
                     
 						<div class="field half">
 							<label for="img">Select image:</label>
-                            <input type="file" id="image" name="image" accept="image/*">
+                            <input type="file"  name="image" accept="image/*">
 						</div> 
 
 						<div class="field">
@@ -47,6 +47,7 @@
 						</ul>
                         
 					</form>
+				{% endblock %}
                     <div>
                             {% for message in messages %}
                             <h3> {{message}}  </h3>
