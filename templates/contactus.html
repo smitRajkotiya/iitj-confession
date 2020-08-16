@@ -28,7 +28,7 @@
 							<a herf="postpage">Postpage</a>
 							<a herf="creatpost">Creatpost</a>
 							<a href="accounts/logout">Logout</a>
-						{% else %}	
+						{% else %}
 							<a href="accounts/register">Register</a>
 							<a href="accounts/login">Login</a>
 						{% endif %}
@@ -36,36 +36,68 @@
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
+<!-- Section: Team v.1 -->
+<section class="team-section text-center my-5">
 
-		<!-- Three -->
-			<section id="three" class="wrapper">
-				<div class="inner">
-					<header class="align-center">
-						<h2>Nunc Dignissim</h2>
-						<p>Aliquam erat volutpat nam dui </p>
-					</header>
-					<div class="image round left">
-						<img src="images/pic01.jpg" alt="Pic 01" />
-					</div>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+  <!-- Section heading -->
+  <h2 class="h1-responsive font-weight-bold my-5">Our Team</h2>
+  <!-- Section description -->
 
-					<div class="image round right">
-						<img src="images/pic02.jpg" alt="Pic 02" />
-					</div>
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+  <!-- Grid row -->
+  <div class="row">
 
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+      <div class="avatar mx-auto">
+        <img src="{% static 'images/pic01.jpg' %}" class="rounded-circle z-depth-1"
+          alt="Man Rajkotiya">
+      </div>
+      <h5 class="font-weight-bold mt-4 mb-3">Man Rajkotiya</h5>
+      <p class="text-uppercase blue-text"><strong>Sophomore Student</strong></p>
+      <p class="grey-text">Email Id : rajkotiya.1@iitj.ac.in</p>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="p-2 fa-lg tw-ic">
+          <i class="fab fa-twitter blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
+    </div>
+    <!-- Grid column -->
 
-				</div>
-			</section>
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+      <div class="avatar mx-auto">
+        <img src="{% static 'images/pic02.jpg' %}" class="rounded-circle z-depth-1"
+          alt="Hard Savani">
+      </div>
+      <h5 class="font-weight-bold mt-4 mb-3">Hard Savani</h5>
+      <p class="text-uppercase blue-text"><strong>Sophomore Student</strong></p>
+      <p class="grey-text">Email-id : hard.1@iitj.ac.in</p>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
+    </div>
+    <!-- Grid column -->
+  </div>
+  <!-- Grid row -->
 
-		
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+</section>
+<!-- Section: Team v.1 -->
 </html>
