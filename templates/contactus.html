@@ -47,6 +47,7 @@
   <div class="row">
 
     <!-- Grid column -->
+      <bl>
     <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
       <div class="avatar mx-auto">
         <img src="{% static 'images/pic01.jpg' %}" class="rounded-circle z-depth-1"
@@ -70,6 +71,7 @@
         </a>
       </ul>
     </div>
+      </bl>
     <!-- Grid column -->
 
     <!-- Grid column -->
@@ -95,6 +97,58 @@
     <!-- Grid column -->
   </div>
   <!-- Grid row -->
+<!-- Form -->
+									<h3>Form</h3>
+                                    {% block content %}
+									<form method="post" action="#" >
+                                        {% csrf_token %}
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+											</div>
+											<div class="6u$ 12u$(xsmall)">
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+												<div class="select-wrapper">
+													<select name="demo-category" id="demo-category">
+														<option value="0" >Category</option>
+														<option value="1" >General Query</option>
+														<option value="1">Feedback</option>
+														<option value="1">Concern</option>
+														<option value="1">Technical issue</option>
+													</select>
+												</div>
+											</div>
+											<!-- Break -->
+
+											<!-- Break -->
+											<div class="6u 12u$(small)">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy of this message</label>
+											</div>
+											<div class="6u$ 12u$(small)">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">I am a human and not a robot</label>
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+											<!-- Break -->
+											<div class="12u$">
+												<ul class="actions">
+													<li><input type="submit" value="Send Message" /></li>
+													<li><input type="reset" value="Reset" class="alt" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+                                    {% endblock %}
+									<hr />
+
+
 
 
 
