@@ -27,7 +27,11 @@ def postpage(request):
 def profilepage(request):
     
     confession=conf.objects.filter(email=request.user.email)
-    data= {'confession':confession}
+    noofconfession=conf.objects.filter(email=request.user.email).count()
+    print(noofconfession)
+
+    data= {'confession':confession,'noofconfession':noofconfession}
+
 
     return render(request, 'profilepage.html', data)
 

@@ -21,17 +21,18 @@
 					<a href="/" class="logo">IIT JODHPUR CONFESSION</a>
 					<nav id="nav">
 						<a href="/">Home</a>
-						<a href="/contactus/">Contact Us</a>
-						<a href="/aboutus/">About Us</a>
+						<a href="/contactus/">contact us</a>
+						<a href="/aboutus/">about us</a>
 						{% if user.is_authenticated %}
-							Hello, {{user.first_name}}
-							<a herf="postpage">Postpage</a>
-							<a herf="creatpost">Creatpost</a>
-							<a href="accounts/logout">Logout</a>
+							Hello, {{user.username}}
+							<a href="/postpage/">postpage</a>
+							<a href="/creatpost/">Creat Post</a>
+							<a href="/profilepage/">profile</a>
+							<a href="/accounts/logout">Logout</a>
 						{% else %}	
-							<a href="accounts/register">Register</a>
-							<a href="accounts/login">Login</a>
-						{% endif %}
+							<a href="/accounts/register/">Register</a>
+							<a href="/accounts/login/">Login</a>
+						{% endif %}	
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>

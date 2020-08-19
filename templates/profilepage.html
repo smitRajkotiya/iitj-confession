@@ -12,26 +12,28 @@
 
 </head>
 <body class="subpage">
-<header id="header">
+            <header id="header">
 				<div class="inner">
-					<a href="/" class="logo"> IIT JODHPUR CONFESSION</a>
+					<a href="/" class="logo">IIT JODHPUR CONFESSION</a>
 					<nav id="nav">
 						<a href="/">Home</a>
-						<a href="/contactus/">Contact Us</a>
-						<a href="/aboutus/">About Us</a>
+						<a href="/contactus/">contact us</a>
+						<a href="/aboutus/">about us</a>
 						{% if user.is_authenticated %}
 							Hello, {{user.username}}
-							<a herf="postpage">Postpage</a>
-							<a herf="creatpost">Creatpost</a>
-							<a href="accounts/logout">Logout</a>
-						{% else %}
-							<a href="accounts/register">Register</a>
-							<a href="accounts/login">Login</a>
-						{% endif %}
+							<a href="/postpage/">postpage</a>
+							<a href="/creatpost/">Creat Post</a>
+							<a href="/profilepage/">profile</a>
+							<a href="/accounts/logout">Logout</a>
+						{% else %}	
+							<a href="/accounts/register/">Register</a>
+							<a href="/accounts/login/">Login</a>
+						{% endif %}	
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
+
 <div class="container emp-profile">
     <br>
             <form method="post">
@@ -44,12 +46,6 @@
                                     </h3>
 
                                     <br>
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                                </li>
-
-                            </ul>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -87,17 +83,31 @@
                                                 <label>Institute</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>IITJ</p>
+                                                <p>IIT Jodhpur</p>
                                             </div>
                                         </div>
                                        <div class="row">
-                                            <div class="col-md-6">
+                                            {% comment %} <div class="col-md-6">
                                                 <label>No. of Confessions</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p></p>
-                                            </div>
+                                                <p>{% noofconfession %}</p>
+                                            </div> {% endcomment %}
                                         </div>
+                            {% for i in confession %}
+                        		<article style="border:2px solid green">
+
+        							<img src="/media/{{i.image}}" height="130" width="130" >
+
+							        <header>
+								        <h5>DATE:{{i.currentdate}}</h5>
+							        </header>
+							        <p>{{i.desc}}</p>
+						        	{% comment %} <footer>
+								        <a href="#" class="button">Learn More</a>
+							        </footer> {% endcomment %}
+						        </article>
+                            {% endfor %}
 
                             </div>
 
