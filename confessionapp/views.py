@@ -24,6 +24,25 @@ def postpage(request):
 
     return render(request, 'postpage.html', data)
 
+def haha(request, cid):
+    confession = conf.objects.get(pk=cid)
+    print(confession.noofhaha)
+
+    confession.noofhaha += 1
+    print(confession.noofhaha)
+    print(confession.noofwows)
+    print(confession.noofangrey)
+    return redirect('postpage')
+def wow(request, cid):
+    confession = conf.objects.get(pk=cid)
+    confession.noofwows = confession.noofwows + 1
+    return redirect('postpage')
+def angrey(request, cid):
+    confession = conf.objects.get(pk=cid)
+    confession.noofangrey = confession.noofangrey + 1
+    return redirect('postpage')
+    
+
 def profilepage(request):
     
     confession=conf.objects.filter(email=request.user.email)
@@ -42,7 +61,7 @@ def creatpost(request):
         fs=FileSystemStorage()
         fs.save(image.name,image)
         if request.user.is_authenticated:
-            Confession=conf(image=image, desc=descreption,email=request.user.email)
+            Confession=conf(image=image, desc=descreption,email=request.user.email,noofhaha=0,noofwows=0,noofangrey=0)
             Confession.save();
             print("confession reated")
             return redirect('/')

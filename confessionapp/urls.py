@@ -8,5 +8,8 @@ urlpatterns = [
     path('contactus/', views.contactus, name ='contactus'),
     path('aboutus/', views.aboutus, name ='aboutus'),
     path('profilepage/', views.profilepage, name='profilepage'),
+    path('postpage/haha/<int:cid>/', views.haha),
+    path('postpage/wow/<int:cid>', views.wow),
+    path('postpage/angrey/<int:cid>', views.angrey),
 
 ]
