@@ -1,21 +1,18 @@
 {% load static %}
-
-<!DOCTYPE HTML>
-<!--
-	Projection by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
-	<head>
-		<title>HOME</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<head>
+		<title>Contact Us</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
-	</head>
-	<body>
 
-		<!-- Header -->
+</head>
+<body class="subpage">
+    <!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="/" class="logo">IIT JODHPUR CONFESSION</a>
@@ -37,34 +34,65 @@
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
 			</header>
+        <div class="container emp-profile">
+            <br>
+            
+                <div class="row">
 
-		<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<header>
-						<h1>Here you can read other's confessions</h1>
-					</header>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h3>
+                                        {{user.username}}
+                                    </h3>
 
-					<div class="flex ">
+                                    <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
 
-						<div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <br>
+                                <div class="row">
 
-							<p>to make confession register here</p>
-						</div>
-					</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.username}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.email}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Institute</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>IITJ</p>
+                                            </div>
+                                        </div>
 
-					<footer>
-                        {% if user.is_authenticated %}
-						<a href="/creatpost/" class="button">Make confession</a>
-                        {% else %}
-						<a href="/accounts/register" class="button">Register</a>
-                        {% endif %}
-                    </footer>
-				</div>
-			</section>
 
+                            </div>
 
-		<!-- Three -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        <!-- Three -->
 			<section id="three" class="wrapper align-center">
 				<div class="outer" style="border:2px solid green">
 					<div class="flex flex-2" sta>
@@ -100,15 +128,5 @@
 					</div>
 				</div>
 			</section>
-
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-
+</body>
 </html>
