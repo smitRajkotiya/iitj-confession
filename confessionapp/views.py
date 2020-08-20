@@ -26,20 +26,23 @@ def postpage(request):
 
 def haha(request, cid):
     confession = conf.objects.get(pk=cid)
-    print(confession.noofhaha)
-
-    confession.noofhaha += 1
-    print(confession.noofhaha)
-    print(confession.noofwows)
-    print(confession.noofangrey)
+    confession.noofhaha = confession.noofhaha + 1
+    conf.objects.filter(pk=cid).update(noofhaha=confession.noofhaha)
+    
     return redirect('postpage')
+
 def wow(request, cid):
     confession = conf.objects.get(pk=cid)
     confession.noofwows = confession.noofwows + 1
+    conf.objects.filter(pk=cid).update(noofwows=confession.noofwows)
+
     return redirect('postpage')
+
 def angrey(request, cid):
     confession = conf.objects.get(pk=cid)
     confession.noofangrey = confession.noofangrey + 1
+    conf.objects.filter(pk=cid).update(noofangrey=confession.noofangrey)
+
     return redirect('postpage')
     
 
